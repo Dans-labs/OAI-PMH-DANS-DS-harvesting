@@ -24,8 +24,19 @@ OAI-PMH endpoint can be accessed at `http(s)://<Your Dataverse Installation FQDN
 - https://lifesciences.datastations.nl/oai
 - https://ssh.datastations.nl/oai
 - https://dataverse.nl/oai
+- https://portal.odissei.nl/oai
 
-## Harvesting DANS Data Stations Dataset with OAI-PMH & Python Sickle 
+## GetRecord
+
+https://portal.odissei.nl/oai?verb=GetRecord&identifier=doi:10.17026/DANS-222-GVUS&metadataPrefix=oai_dc
+
+`curl "https://portal.odissei.nl/oai?verb=GetRecord&identifier=doi:10.17026/DANS-222-GVUS&metadataPrefix=dcat3-rdfxml"`
+
+
+## Harvesting DANS Data Stations Datasets with OAI-PMH & Python Sickle 
+
+In Dublin-Core formatz
+
 
 [oai-pmh-sickle.ipynb](oai-pmh-sickle.ipynb) uses Python [Sickle library](https://sickle.readthedocs.io), a lightweight OAI-PMH client library written in Python, designed for retrieving data from OAI interfaces the Pythonic way
 
@@ -37,3 +48,21 @@ Requirements:
 
 - jupyter
 - sickle - `pip install sickle`
+
+## OAI-PMH and Python oaipmh
+
+https://github.com/eth-library/oaipmh
+
+**TODO....** 
+
+
+## Get Dataset RDF(XML) & PARSE it
+
+A more bare bones approaches using requests library, xml.etree and RDFLib.
+
+In [oai-pmh-dcatap.ipynb](oai-pmh-dcatap.ipynb) which requests the DCAT-AP export from ODISSEI Portal
+
+Requirements:
+
+- requests
+- rdflib
