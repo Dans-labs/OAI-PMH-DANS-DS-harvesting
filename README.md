@@ -49,12 +49,18 @@ Requirements:
 - jupyter
 - sickle - `pip install sickle`
 
+## OAI-PMH and Python oaipmh
+
+https://github.com/eth-library/oaipmh
+
+**TODO....** 
+
+
 ## Get Dataset RDF(XML) & PARSE it
 
-A more bare bones approaches using requests library, xml.etree and RDFLib 
+A more bare bones approaches using requests library, xml.etree and RDFLib.
 
-[oai-pmh-dcatap.ipynb](oai-pmh-dcatap.ipynb)
-
+In [oai-pmh-dcatap.ipynb](oai-pmh-dcatap.ipynb) which requests the DCAT-AP export from ODISSEI Portal
 
 Requirements:
 
