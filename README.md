@@ -24,6 +24,14 @@ OAI-PMH endpoint can be accessed at `http(s)://<Your Dataverse Installation FQDN
 - https://lifesciences.datastations.nl/oai
 - https://ssh.datastations.nl/oai
 - https://dataverse.nl/oai
+- https://portal.odissei.nl/oai
+
+## GetRecord
+
+https://portal.odissei.nl/oai?verb=GetRecord&identifier=doi:10.17026/DANS-222-GVUS&metadataPrefix=oai_dc
+
+`curl "https://portal.odissei.nl/oai?verb=GetRecord&identifier=doi:10.17026/DANS-222-GVUS&metadataPrefix=dcat3-rdfxml"`
+
 
 ## Harvesting DANS Data Stations Dataset with OAI-PMH & Python Sickle 
 
@@ -37,3 +45,15 @@ Requirements:
 
 - jupyter
 - sickle - `pip install sickle`
+
+## Get Dataset RDF(XML) & PARSE it
+
+a more bare bones approaches using requests library, xml.etree and RDFLib 
+
+[oai-pmh-dcatap.ipynb](oai-pmh-dcatap.ipynb)
+
+
+Requirements:
+
+- requests
+- rdflib
